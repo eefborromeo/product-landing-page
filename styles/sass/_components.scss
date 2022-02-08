@@ -1,0 +1,25 @@
+// NAVBAR
+header {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0 0;
+}
+
+.nav-link {
+  margin: 12px 0;
+  a {
+    font-size: 1.625rem;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
