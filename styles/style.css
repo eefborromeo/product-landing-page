@@ -194,7 +194,53 @@ section .wave {
   }
 
   .main-section {
-    margin-top: 50px;
+    margin-top: 70px;
+    padding-top: 110px;
+    padding-bottom: 0;
+  }
+  .main-section .flex-container {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+  }
+  .main-section .flex-container h1 {
+    font-size: 4rem;
+  }
+  .main-section .flex-container h1 span {
+    font-size: 6.5rem;
+  }
+  .main-section .flex-container .img-container {
+    transform: rotate(10deg);
+    position: relative;
+    z-index: 1;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+
+  #video {
+    width: 85%;
+    margin: auto;
+  }
+
+  .flavors {
+    padding-bottom: 0px;
+  }
+  .flavors .flex-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .flavors .flex-container .flavor .flavor-img {
+    width: 50%;
+  }
+
+  .contact-us {
+    padding-top: 150px;
+  }
+  .contact-us form {
+    width: 80%;
+    margin: auto;
   }
 }
 
