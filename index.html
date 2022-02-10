@@ -9,10 +9,10 @@
 </head>
 <body>
     <header id="header">
-        <div id="header-img">
-            LOGO
-        </div>
         <nav id="nav-bar">
+            <div id="header-img">
+                LOGO
+            </div>
             <ul>
                 <li class="nav-link">
                     <a href="#">How It's Made</a>
@@ -31,5 +31,86 @@
               </svg>          
         </div>
     </header>
+    <section class="main-section">
+        <h1>Here's the <span>Scoop</span></h1>
+        <div>
+            <img src="images/scoop.png" alt="">
+        </div>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 58.333">
+                <path id="wave" d="M0,58.333,12.5,51.38c12.918-4.1,32.9-9.792,57.9-15.26s54.6-5.651,79.6,0c25,5.547,46.484,16.641,71.484,15.26C246.484,49.9,275,36.2,300,33.333s50,11.2,62.5,18.047L375,58.333V0H0Z" fill="#f8b8b4"/>
+              </svg>              
+        </div>
+    </section>
+    <section class="how-its-made">
+        <h2>How It's Made</h2>
+        <div id="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZioHPoK3IKg?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 58.333">
+                <path id="wave" d="M0,58.333,12.5,51.38c12.918-4.1,32.9-9.792,57.9-15.26s54.6-5.651,79.6,0c25,5.547,46.484,16.641,71.484,15.26C246.484,49.9,275,36.2,300,33.333s50,11.2,62.5,18.047L375,58.333V0H0Z" fill="#cee4f3"/>
+              </svg>
+              
+        </div>
+    </section>
+    <section class="flavors">
+        <h2>Flavors</h2>
+        <div class="container">
+            <div class="flavor">
+                <div class="flavor-img">
+                    <img src="images/strawberry.png" alt="Strawberry Ice Cream">
+                </div>
+                <h3>Strawberry</h3>
+            </div>
+            <div class="flavor">
+                <div class="flavor-img">
+                    <img src="images/bubblegum.png" alt="Bubble Gum Ice Cream">
+                </div>
+                <h3>Bubble Gum</h3>
+            </div>
+            <div class="flavor">
+                <div class="flavor-img">
+                    <img src="images/mango.png" alt="Mango Ice Cream">
+                </div>
+                <h3>Mango</h3>
+            </div>
+            <div class="flavor">
+                <div class="flavor-img">
+                    <img src="images/chocolate.png" alt="Chocolate Ice Cream">
+                </div>
+                <h3>Chocolate</h3>
+            </div>
+            <div class="flavor">
+                <div class="flavor-img">
+                    <img src="images/vanilla.png" alt="Vanilla Ice Cream">
+                </div>
+                <h3>Vanilla</h3>
+            </div>
+        </div>
+    </section>
+    <section class="contact-us">
+        <div class="wave top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 58.333">
+                <path id="wave" d="M0,58.333,12.5,51.38c12.918-4.1,32.9-9.792,57.9-15.26s54.6-5.651,79.6,0c25,5.547,46.484,16.641,71.484,15.26C246.484,49.9,275,36.2,300,33.333s50,11.2,62.5,18.047L375,58.333V0H0Z" fill="#fff"/>
+            </svg>
+        </div>
+         <h2>Contact Us</h2>
+         <form action="">
+             <div class="form-control">
+                 <label for="name">Name</label>
+                 <input type="text" name="name" id="name">
+             </div>
+             <div class="form-control">
+                 <label for="email">Email</label>
+                 <input type="email" name="email" id="email">
+             </div>
+             <div class="form-control">
+                 <label for="message">Message</label>
+                 <textarea name="message" id="message"></textarea>
+             </div>
+             <button type="submit">Send</button>
+         </form>
+    </section>
 </body>
 </html>
