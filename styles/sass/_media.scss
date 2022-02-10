@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
-  .wave {
-    bottom: -95px;
+  .wave.top {
+    top: -80px;
   }
   header {
     height: auto;
@@ -41,10 +41,15 @@
           font-size: 6.5rem;
         }
       }
+      p {
+        width: 100%;
+        font-size: 0.75rem;
+      }
       .img-container {
         transform: rotate(10deg);
         position: relative;
         z-index: 1;
+        width: 140%;
       }
     }
   }
@@ -72,7 +77,6 @@
   }
 
   .contact-us {
-    padding-top: 150px;
     form {
       width: 80%;
       margin: auto;
@@ -81,4 +85,91 @@
 }
 
 @media (min-width: 1024px) {
+  header {
+    .wave {
+      top: 20px;
+    }
+  }
+
+  .main-section {
+    padding-top: 120px;
+    .flex-container {
+      h1 {
+        font-size: 5rem;
+        span {
+          font-size: 8.5rem;
+        }
+      }
+    }
+  }
+
+  .flavors {
+    .flex-container {
+      justify-content: space-evenly;
+    }
+  }
+
+  .contact-us {
+    padding-top: 180px;
+    form {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  h2,
+  h3 {
+    font-size: 3.6875rem;
+  }
+
+  header {
+    .wave {
+      top: 0;
+    }
+  }
+
+  .main-section {
+    .flex-container {
+      h1 {
+        font-size: 7rem;
+        span {
+          font-size: 11.5rem;
+        }
+      }
+      .img-container {
+        width: 70%;
+      }
+    }
+  }
+
+  .how-its-made,
+  .flavors {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+
+  .flavors {
+    .flex-container {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-section {
+    margin-top: 0;
+    padding-top: 220px;
+    .flex-container {
+      p {
+        width: 80%;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #video {
+    width: 70%;
+  }
 }

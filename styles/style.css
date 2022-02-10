@@ -6,6 +6,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }
@@ -107,6 +111,12 @@ section .wave {
 .main-section h1 span {
   font-size: 5.3125rem;
 }
+.main-section p {
+  width: 80%;
+  margin: auto;
+  color: white;
+  margin-bottom: 1rem;
+}
 
 .how-its-made {
   background-color: #cee4f3;
@@ -126,7 +136,6 @@ section .wave {
 }
 
 .contact-us {
-  z-index: 0;
   background-color: #fdf0c1;
   padding: 100px 20px;
 }
@@ -166,8 +175,8 @@ section .wave {
 }
 
 @media (min-width: 768px) {
-  .wave {
-    bottom: -95px;
+  .wave.top {
+    top: -80px;
   }
 
   header {
@@ -209,10 +218,15 @@ section .wave {
   .main-section .flex-container h1 span {
     font-size: 6.5rem;
   }
+  .main-section .flex-container p {
+    width: 100%;
+    font-size: 0.75rem;
+  }
   .main-section .flex-container .img-container {
     transform: rotate(10deg);
     position: relative;
     z-index: 1;
+    width: 140%;
   }
 
   .flex-container {
@@ -235,12 +249,80 @@ section .wave {
     width: 50%;
   }
 
-  .contact-us {
-    padding-top: 150px;
-  }
   .contact-us form {
     width: 80%;
     margin: auto;
+  }
+}
+@media (min-width: 1024px) {
+  header .wave {
+    top: 20px;
+  }
+
+  .main-section {
+    padding-top: 120px;
+  }
+  .main-section .flex-container h1 {
+    font-size: 5rem;
+  }
+  .main-section .flex-container h1 span {
+    font-size: 8.5rem;
+  }
+
+  .flavors .flex-container {
+    justify-content: space-evenly;
+  }
+
+  .contact-us {
+    padding-top: 180px;
+  }
+  .contact-us form {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  h2,
+h3 {
+    font-size: 3.6875rem;
+  }
+
+  header .wave {
+    top: 0;
+  }
+
+  .main-section .flex-container h1 {
+    font-size: 7rem;
+  }
+  .main-section .flex-container h1 span {
+    font-size: 11.5rem;
+  }
+  .main-section .flex-container .img-container {
+    width: 70%;
+  }
+
+  .how-its-made,
+.flavors {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+
+  .flavors .flex-container {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (min-width: 1440px) {
+  .main-section {
+    margin-top: 0;
+    padding-top: 220px;
+  }
+  .main-section .flex-container p {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  #video {
+    width: 70%;
   }
 }
 
