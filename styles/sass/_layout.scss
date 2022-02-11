@@ -1,6 +1,5 @@
 section {
   position: relative;
-  z-index: -1;
   text-align: center;
   .wave {
     filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
@@ -31,13 +30,11 @@ section {
 
 .how-its-made {
   background-color: #cee4f3;
-  z-index: -2;
   padding: 100px 20px;
 }
 
 .flavors {
   background-color: #fff;
-  z-index: -3;
   padding: 100px 20px;
   h3 {
     font-weight: 300;
@@ -49,6 +46,7 @@ section {
 .contact-us {
   background-color: #fdf0c1;
   padding: 100px 20px;
+  z-index: 1;
   form {
     background-color: #f8b8b4;
     padding: 20px 20px 10px;

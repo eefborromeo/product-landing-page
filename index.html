@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ice Cream Shop - Product Landing Page</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="script/script.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -100,14 +101,15 @@
             </svg>
         </div>
          <h2>Contact Us</h2>
-         <form action="">
+         <p>We would love to hear more from you!</p>
+         <form action="/response.html">
              <div class="form-control">
-                 <label for="name">Name</label>
-                 <input type="text" name="name" id="name">
+                 <label for="name">Name *</label>
+                 <input type="text" name="name" id="name" required>
              </div>
              <div class="form-control">
-                 <label for="email">Email</label>
-                 <input type="email" name="email" id="email">
+                 <label for="email">Email *</label>
+                 <input type="email" name="email" id="email" required>
              </div>
              <div class="form-control">
                  <label for="message">Message</label>
@@ -115,6 +117,6 @@
              </div>
              <button type="submit">Send</button>
          </form>
-    </section>
+        </section>
 </body>
 </html>

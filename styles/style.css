@@ -38,8 +38,16 @@ header {
   left: 0;
   width: 100%;
   background: #fff;
-  padding: 20px 0 0;
+  padding: 20px 0 20px;
   height: 200px;
+  z-index: 10;
+}
+header nav {
+  position: relative;
+  z-index: 9;
+}
+header .wave.scroll {
+  display: none;
 }
 
 .nav-link {
@@ -89,7 +97,6 @@ header {
 
 section {
   position: relative;
-  z-index: -1;
   text-align: center;
 }
 section .wave {
@@ -120,13 +127,11 @@ section .wave {
 
 .how-its-made {
   background-color: #cee4f3;
-  z-index: -2;
   padding: 100px 20px;
 }
 
 .flavors {
   background-color: #fff;
-  z-index: -3;
   padding: 100px 20px;
 }
 .flavors h3 {
@@ -138,6 +143,7 @@ section .wave {
 .contact-us {
   background-color: #fdf0c1;
   padding: 100px 20px;
+  z-index: 1;
 }
 .contact-us form {
   background-color: #f8b8b4;
@@ -196,10 +202,15 @@ section .wave {
   header nav ul .nav-link a {
     font-size: 1.375rem;
   }
+  header nav ul .nav-link:first-child a:hover {
+    color: #cee4f3;
+  }
+  header nav ul .nav-link:last-child a:hover {
+    color: #feefc1;
+  }
   header .wave {
     bottom: initial;
     top: 35px;
-    z-index: -1;
   }
 
   .main-section {
@@ -252,6 +263,10 @@ section .wave {
   .contact-us form {
     width: 80%;
     margin: auto;
+  }
+
+  #response {
+    width: 60%;
   }
 }
 @media (min-width: 1024px) {
