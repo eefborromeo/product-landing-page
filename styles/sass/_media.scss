@@ -20,6 +20,9 @@
           &:first-child a:hover {
             color: #cee4f3;
           }
+          &:nth-child(2) a:hover {
+            color: #af8268;
+          }
           &:last-child a:hover {
             color: #feefc1;
           }
@@ -64,8 +67,25 @@
   }
 
   #video {
-    width: 85%;
-    margin: auto;
+    padding-bottom: 35.25%;
+  }
+
+  .how-its-made {
+    .flex-container {
+      align-items: center;
+      .about-section {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+
+        h3 {
+          font-size: 1.6875rem;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 
   .flavors {
@@ -148,6 +168,10 @@
       }
       .img-container {
         width: 70%;
+      }
+      p {
+        font-size: 1rem;
+        width: 80%;
       }
     }
   }

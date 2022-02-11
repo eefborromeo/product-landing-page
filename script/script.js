@@ -8,7 +8,7 @@
     var domName = document.querySelector('[data-name]');
     var domEmail = document.querySelector('[data-email]');
 
-    var headerWave = document.querySelector('#header .wave')
+    var header = document.querySelector('#header')
 
     if (name && email) {
         domName.textContent = name.toUpperCase();
@@ -18,9 +18,9 @@
     // SCROLL
     window.addEventListener('scroll', function() {
         if (document.documentElement.scrollTop > 120) {
-            headerWave.classList.add('scroll')
+            header.classList.add('scroll')
         } else {
-            headerWave.classList.remove('scroll')
+            header.classList.remove('scroll')
         }
     })
 })()

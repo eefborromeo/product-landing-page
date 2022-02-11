@@ -46,7 +46,10 @@ header nav {
   position: relative;
   z-index: 9;
 }
-header .wave.scroll {
+header.scroll {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+header.scroll .wave {
   display: none;
 }
 
@@ -205,6 +208,9 @@ section .wave {
   header nav ul .nav-link:first-child a:hover {
     color: #cee4f3;
   }
+  header nav ul .nav-link:nth-child(2) a:hover {
+    color: #af8268;
+  }
   header nav ul .nav-link:last-child a:hover {
     color: #feefc1;
   }
@@ -245,8 +251,22 @@ section .wave {
   }
 
   #video {
-    width: 85%;
-    margin: auto;
+    padding-bottom: 35.25%;
+  }
+
+  .how-its-made .flex-container {
+    align-items: center;
+  }
+  .how-its-made .flex-container .about-section {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .how-its-made .flex-container .about-section h3 {
+    font-size: 1.6875rem;
+  }
+  .how-its-made .flex-container .about-section p {
+    margin-bottom: 10px;
   }
 
   .flavors {
@@ -313,6 +333,10 @@ h3 {
   }
   .main-section .flex-container .img-container {
     width: 70%;
+  }
+  .main-section .flex-container p {
+    font-size: 1rem;
+    width: 80%;
   }
 
   .how-its-made,
