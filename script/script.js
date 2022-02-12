@@ -9,6 +9,10 @@
     var domEmail = document.querySelector('[data-email]');
 
     var header = document.querySelector('#header')
+    var hamburgerButton = document.querySelector('#hamburger-menu')
+    
+    var year = document.querySelector('[data-year]');
+    var currentYear = new Date().getFullYear();
 
     if (name && email) {
         domName.textContent = name.toUpperCase();
@@ -23,4 +27,18 @@
             header.classList.remove('scroll')
         }
     })
+    
+    // HAMBURGER MENU
+    hamburgerButton.addEventListener('click', function() {
+        var navBar = document.querySelector('#nav-bar')
+        if (navBar.classList.contains('open')) {
+            navBar.classList.remove('open')
+        } else {
+            navBar.classList.add('open')
+        }
+    })
+
+    // YEAR
+    year.textContent = currentYear;
+    
 })()

@@ -7,37 +7,71 @@ header {
   width: 100%;
   background: #fff;
   padding: 20px 0 20px;
-  height: 200px;
   z-index: 10;
   nav {
     position: relative;
     z-index: 9;
+    .mobile-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      #header-img {
+        width: 75px;
+      }
+      button {
+        font-size: 1.5rem;
+        border: none;
+        background: none;
+        &::before {
+          content: '\2630';
+        }
+      }
+    }
+
+    &.open {
+      button {
+        &::before {
+          content: '\0078';
+        }
+      }
+      ul {
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+        transition: 800ms;
+      }
+    }
   }
   .wave {
     visibility: visible;
-    opacity: 1;
     transition: 800ms;
   }
   &.scroll {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     .wave {
       visibility: hidden;
-      opacity: 0;
+      bottom: 0;
     }
   }
 }
-
-.nav-link {
-  margin: 12px 0;
-  a {
-    font-size: 1.625rem;
-    text-transform: uppercase;
+ul {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  .nav-link {
+    margin: 12px 0;
+    a {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
   }
 }
 
 .wave {
   position: absolute;
-  bottom: -50px;
+  bottom: -30px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -71,4 +105,24 @@ header {
 }
 .flavor-img img {
   width: 100%;
+}
+
+// FOOTER
+footer {
+  background-color: #202020;
+  padding: 30px;
+  color: #bbbbbb;
+  .flex-container {
+    justify-content: space-between;
+  }
+  a {
+    margin-left: 15px;
+    &:hover {
+      color: #da737f;
+    }
+    i {
+      font-style: normal;
+      font-size: 2rem;
+    }
+  }
 }

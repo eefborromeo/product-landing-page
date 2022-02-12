@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ice Cream Shop - Product Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" integrity="sha512-bSncow0ApIhONbz+pNI52n0trz5fMWbgteHsonaPk42JbunIeM9ee+zTYAUP1eLPky5wP0XZ7MSLAPxKkwnlzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
     <script src="script/script.js" defer></script>
 </head>
 <body>
     <header id="header">
         <nav id="nav-bar">
-            <div id="header-img">
-                LOGO
+            <div class="mobile-container">
+                <div id="header-img">
+                    <a href="#main">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <button id="hamburger-menu">
+                    
+                </button>
             </div>
             <ul>
                 <li class="nav-link">
@@ -32,7 +40,7 @@
               </svg>          
         </div>
     </header>
-    <section class="main-section">
+    <section id="main" class="main-section">
         <div class="flex-container">
             <div class="text-container">
                 <h1>Here's the <span>Scoop</span></h1>
@@ -133,28 +141,50 @@
          <h2>Contact Us</h2>
          <p>We would love to hear more from you!</p>
          <div class="popsicle-form">
-             <!-- <div class="popsicle">
+             <div class="popsicle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545 279.792">
                     <path id="Path_1" data-name="Path 1" d="M1725.387,3620.649s31.839,4.18,48.193-6.626,14.231-9.261,29.274-27.762c7.476-9.2,32.519-2.2,47.8-14.551,17.243-15.94,21.825-33.331,24.1-41.481,2.481-8.9,20.755-13.591,33.966-30.839,10.53-13.749,17.131-39.689,13.408-51.881s20.427-20.657,21.554-41.731c1.524-24.012-5.249-45.6-5.249-45.6s33.232-16.006,95.067-5.651,153.517,83.618,179.652,119.94,33.319,68.993,44.768,95.227,12.465,58.351,12.465,58.351l-545,2.786Z" transform="translate(-1725.387 -3351.035)" fill="#f8b8b4"/>
                   </svg>
                   
-             </div> -->
-             <form action="/response.html">
+             </div>
+             <form id="form" action="/response.html">
                  <div class="form-control">
                      <label for="name">Name *</label>
-                     <input type="text" name="name" id="name" required>
+                     <input type="text" name="name" id="name" required pattern="[A-Za-z ]{2,}" placeholder="Juan De la Cruz">
+                     <div class="requirements">
+                        Must contain at least 2 characters of uppercase or lowercase letters from A - Z.
+                    </div>
                  </div>
                  <div class="form-control">
                      <label for="email">Email *</label>
-                     <input type="email" name="email" id="email" required>
+                     <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z.]{2,}" placeholder="youremail@email.com">
+                     <div class="requirements">
+                        Must be a valid email address.
+                    </div>
                  </div>
                  <div class="form-control">
                      <label for="message">Message</label>
                      <textarea name="message" id="message"></textarea>
                  </div>
-                 <button type="submit">Send</button>
+                 <input id="submit" type="submit"></input>
              </form>
          </div>
         </section>
+        <footer>
+            <div class="flex-container">
+                <p>&#169; Copyright The Ice Cream Shop  <span data-year></span></p>
+                <div class="social">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

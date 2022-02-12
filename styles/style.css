@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
 * {
   box-sizing: border-box;
@@ -39,16 +40,41 @@ header {
   width: 100%;
   background: #fff;
   padding: 20px 0 20px;
-  height: 200px;
   z-index: 10;
 }
 header nav {
   position: relative;
   z-index: 9;
 }
+header nav .mobile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+header nav .mobile-container #header-img {
+  width: 75px;
+}
+header nav .mobile-container button {
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+}
+header nav .mobile-container button::before {
+  content: "☰";
+}
+header nav.open button::before {
+  content: "x";
+}
+header nav.open ul {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: 800ms;
+}
 header .wave {
   visibility: visible;
-  opacity: 1;
   transition: 800ms;
 }
 header.scroll {
@@ -56,20 +82,25 @@ header.scroll {
 }
 header.scroll .wave {
   visibility: hidden;
-  opacity: 0;
+  bottom: 0;
 }
 
-.nav-link {
+ul {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+}
+ul .nav-link {
   margin: 12px 0;
 }
-.nav-link a {
-  font-size: 1.625rem;
+ul .nav-link a {
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
 .wave {
   position: absolute;
-  bottom: -50px;
+  bottom: -30px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -104,6 +135,25 @@ header.scroll .wave {
   width: 100%;
 }
 
+footer {
+  background-color: #202020;
+  padding: 30px;
+  color: #bbbbbb;
+}
+footer .flex-container {
+  justify-content: space-between;
+}
+footer a {
+  margin-left: 15px;
+}
+footer a:hover {
+  color: #da737f;
+}
+footer a i {
+  font-style: normal;
+  font-size: 2rem;
+}
+
 section {
   position: relative;
   text-align: center;
@@ -114,7 +164,7 @@ section .wave {
 
 .main-section {
   background-color: #f8b8b4;
-  margin-top: 200px;
+  margin-top: 65px;
   padding-top: 70px;
   padding-bottom: 50px;
 }
@@ -135,6 +185,14 @@ section .wave {
 }
 .main-section.response {
   height: 100vh;
+}
+.main-section.response p {
+  background-color: #cee4f3;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 30px;
+  color: #202020;
 }
 
 .how-its-made {
@@ -159,6 +217,12 @@ section .wave {
   background-color: #fdf0c1;
   padding: 100px 20px;
   z-index: 1;
+}
+.contact-us h2 {
+  margin-bottom: 10px;
+}
+.contact-us p {
+  margin-bottom: 3rem;
 }
 .contact-us .popsicle-form .popsicle svg {
   display: block;
@@ -188,7 +252,27 @@ section .wave {
 .contact-us .popsicle-form form .form-control textarea {
   height: 200px;
 }
-.contact-us .popsicle-form form button {
+.contact-us .popsicle-form form .form-control input[type=text]:invalid:not(focus):not(:placeholder-shown),
+.contact-us .popsicle-form form .form-control input[type=email]:invalid:not(focus):not(:placeholder-shown) {
+  background: pink;
+  border: 2px solid #e22a2a;
+  outline: none;
+}
+.contact-us .popsicle-form form .form-control input[type=text]:invalid:not(focus):not(:placeholder-shown) ~ .requirements,
+.contact-us .popsicle-form form .form-control input[type=email]:invalid:not(focus):not(:placeholder-shown) ~ .requirements {
+  max-height: 200px;
+  padding: 10px 5px 0;
+}
+.contact-us .popsicle-form form .form-control .requirements {
+  font-size: 10px;
+  padding: 15px 5px 0;
+  color: red;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.28s;
+  font-style: italic;
+}
+.contact-us .popsicle-form form input[type=submit] {
   display: block;
   margin-left: auto;
   background-color: #da737f;
@@ -223,9 +307,22 @@ section .wave {
     width: 80%;
     margin: auto;
   }
+  header nav .mobile-container {
+    width: auto;
+    margin: initial;
+  }
+  header nav .mobile-container #header-img {
+    width: 100px;
+  }
+  header nav #hamburger-menu {
+    display: none;
+  }
   header nav ul {
     display: flex;
     gap: 20px;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
   }
   header nav ul .nav-link a {
     font-size: 1.375rem;
@@ -240,8 +337,7 @@ section .wave {
     color: #feefc1;
   }
   header .wave {
-    bottom: initial;
-    top: 35px;
+    bottom: -85px;
   }
 
   .main-section {
@@ -269,6 +365,10 @@ section .wave {
     position: relative;
     z-index: 1;
     width: 140%;
+  }
+  .main-section.response p {
+    width: 70%;
+    margin-top: 70px;
   }
 
   .flex-container {
@@ -305,8 +405,8 @@ section .wave {
     width: 50%;
   }
 
-  .contact-us form {
-    width: 80%;
+  .contact-us .popsicle-form {
+    width: 50%;
     margin: auto;
   }
 
@@ -316,7 +416,7 @@ section .wave {
 }
 @media (min-width: 1024px) {
   header .wave {
-    top: 20px;
+    bottom: -100px;
   }
 
   .main-section {
@@ -328,6 +428,10 @@ section .wave {
   .main-section .flex-container h1 span {
     font-size: 8.5rem;
   }
+  .main-section.response p {
+    width: 50%;
+    margin-top: 70px;
+  }
 
   .flavors .flex-container {
     justify-content: space-evenly;
@@ -336,18 +440,11 @@ section .wave {
   .contact-us {
     padding-top: 180px;
   }
-  .contact-us form {
-    width: 25%;
-  }
 }
 @media (min-width: 1200px) {
   h2,
 h3 {
     font-size: 3.6875rem;
-  }
-
-  header .wave {
-    top: 0;
   }
 
   .main-section .flex-container h1 {
@@ -372,6 +469,11 @@ h3 {
 
   .flavors .flex-container {
     width: 80%;
+    margin: auto;
+  }
+
+  .contact-us .popsicle-form {
+    width: 30%;
     margin: auto;
   }
 }

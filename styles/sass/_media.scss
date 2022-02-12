@@ -10,9 +10,22 @@
       align-items: center;
       width: 80%;
       margin: auto;
+      .mobile-container {
+        width: auto;
+        margin: initial;
+        #header-img {
+          width: 100px;
+        }
+      }
+      #hamburger-menu {
+        display: none;
+      }
       ul {
         display: flex;
         gap: 20px;
+        height: auto;
+        visibility: visible;
+        opacity: 1;
         .nav-link {
           a {
             font-size: 1.375rem;
@@ -30,8 +43,7 @@
       }
     }
     .wave {
-      bottom: initial;
-      top: 35px;
+      bottom: -85px;
     }
   }
 
@@ -58,6 +70,12 @@
         position: relative;
         z-index: 1;
         width: 140%;
+      }
+    }
+    &.response {
+      p {
+        width: 70%;
+        margin-top: 70px;
       }
     }
   }
@@ -102,8 +120,8 @@
   }
 
   .contact-us {
-    form {
-      width: 80%;
+    .popsicle-form {
+      width: 50%;
       margin: auto;
     }
   }
@@ -116,7 +134,7 @@
 @media (min-width: 1024px) {
   header {
     .wave {
-      top: 20px;
+      bottom: -100px;
     }
   }
 
@@ -130,6 +148,12 @@
         }
       }
     }
+    &.response {
+      p {
+        width: 50%;
+        margin-top: 70px;
+      }
+    }
   }
 
   .flavors {
@@ -140,9 +164,6 @@
 
   .contact-us {
     padding-top: 180px;
-    form {
-      width: 25%;
-    }
   }
 }
 
@@ -150,12 +171,6 @@
   h2,
   h3 {
     font-size: 3.6875rem;
-  }
-
-  header {
-    .wave {
-      top: 0;
-    }
   }
 
   .main-section {
@@ -185,6 +200,13 @@
   .flavors {
     .flex-container {
       width: 80%;
+      margin: auto;
+    }
+  }
+
+  .contact-us {
+    .popsicle-form {
+      width: 30%;
       margin: auto;
     }
   }
