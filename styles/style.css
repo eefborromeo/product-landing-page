@@ -46,11 +46,17 @@ header nav {
   position: relative;
   z-index: 9;
 }
+header .wave {
+  visibility: visible;
+  opacity: 1;
+  transition: 800ms;
+}
 header.scroll {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 header.scroll .wave {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .nav-link {
@@ -145,37 +151,44 @@ section .wave {
   font-size: 2.125rem;
   margin-top: 30px;
 }
+.flavors .flex-container {
+  align-items: flex-end;
+}
 
 .contact-us {
   background-color: #fdf0c1;
   padding: 100px 20px;
   z-index: 1;
 }
-.contact-us form {
-  background-color: #f8b8b4;
-  padding: 20px 20px 10px;
-  text-align: left;
-  border-radius: 10px;
+.contact-us .popsicle-form .popsicle svg {
+  display: block;
+  margin-bottom: -10px;
 }
-.contact-us form .form-control {
+.contact-us .popsicle-form form {
+  background-color: #f8b8b4;
+  padding: 20px 40px 45px;
+  text-align: left;
+  border-radius: 0 0 100px 100px;
+}
+.contact-us .popsicle-form form .form-control {
   width: 100%;
 }
-.contact-us form .form-control label {
+.contact-us .popsicle-form form .form-control label {
   display: block;
   margin-bottom: 5px;
 }
-.contact-us form .form-control input,
-.contact-us form .form-control textarea {
+.contact-us .popsicle-form form .form-control input,
+.contact-us .popsicle-form form .form-control textarea {
   width: 100%;
   padding: 15px;
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
 }
-.contact-us form .form-control textarea {
+.contact-us .popsicle-form form .form-control textarea {
   height: 200px;
 }
-.contact-us form button {
+.contact-us .popsicle-form form button {
   display: block;
   margin-left: auto;
   background-color: #da737f;

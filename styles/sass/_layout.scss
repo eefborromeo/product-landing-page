@@ -45,45 +45,54 @@ section {
     font-size: 2.125rem;
     margin-top: 30px;
   }
+  .flex-container {
+    align-items: flex-end;
+  }
 }
 
 .contact-us {
   background-color: #fdf0c1;
   padding: 100px 20px;
   z-index: 1;
-  form {
-    background-color: #f8b8b4;
-    padding: 20px 20px 10px;
-    text-align: left;
-    border-radius: 10px;
-    .form-control {
-      width: 100%;
-      label {
-        display: block;
-        margin-bottom: 5px;
-      }
-      input,
-      textarea {
-        width: 100%;
-        padding: 15px;
-        margin-bottom: 10px;
-        border: none;
-        border-radius: 5px;
-      }
-
-      textarea {
-        height: 200px;
-      }
-    }
-    button {
+  .popsicle-form {
+    .popsicle svg {
       display: block;
-      margin-left: auto;
-      background-color: #da737f;
-      border: none;
-      padding: 15px 40px;
-      border-radius: 5px;
-      color: white;
-      text-transform: uppercase;
+      margin-bottom: -10px;
+    }
+    form {
+      background-color: #f8b8b4;
+      padding: 20px 40px 45px;
+      text-align: left;
+      border-radius: 0 0 100px 100px;
+      .form-control {
+        width: 100%;
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+        input,
+        textarea {
+          width: 100%;
+          padding: 15px;
+          margin-bottom: 10px;
+          border: none;
+          border-radius: 5px;
+        }
+
+        textarea {
+          height: 200px;
+        }
+      }
+      button {
+        display: block;
+        margin-left: auto;
+        background-color: #da737f;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 5px;
+        color: white;
+        text-transform: uppercase;
+      }
     }
   }
   &::after {
