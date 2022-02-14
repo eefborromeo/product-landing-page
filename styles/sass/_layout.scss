@@ -26,18 +26,6 @@ section {
     color: white;
     margin-bottom: 1rem;
   }
-
-  &.response {
-    height: 100vh;
-    p {
-      background-color: #cee4f3;
-      border: 3px solid white;
-      border-radius: 5px;
-      padding: 20px;
-      margin-top: 30px;
-      color: #202020;
-    }
-  }
 }
 
 .how-its-made {
@@ -140,5 +128,29 @@ section {
     background-color: #ca612f;
     margin: auto;
     border-radius: 0 0 10px 10px;
+  }
+}
+
+// RESPONSE PAGE
+.response {
+  padding: 20px;
+  height: 100vh;
+  color: #818181;
+  #logo-img {
+    width: 150px;
+    margin: 1rem auto;
+    img {
+      width: 100%;
+    }
+  }
+  h1 {
+    margin-bottom: 1rem;
+  }
+  p {
+    width: 50%;
+    margin: 0 auto 1rem;
+  }
+  a {
+    text-decoration: underline;
   }
 }
