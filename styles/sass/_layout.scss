@@ -31,6 +31,13 @@ section {
 .how-its-made {
   background-color: #cee4f3;
   padding: 100px 20px;
+  .about-section {
+    padding-top: 1rem;
+    p {
+      text-align: left;
+      padding-bottom: 1rem;
+    }
+  }
 }
 
 .flavors {

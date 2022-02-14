@@ -188,6 +188,13 @@ section .wave {
   background-color: #cee4f3;
   padding: 100px 20px;
 }
+.how-its-made .about-section {
+  padding-top: 1rem;
+}
+.how-its-made .about-section p {
+  text-align: left;
+  padding-bottom: 1rem;
+}
 
 .flavors {
   background-color: #fff;
